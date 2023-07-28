@@ -4,6 +4,7 @@
 	left: 0;
 	top: 41px;
 	width: 100vw;
+	z-index: 100;
 
 	&__logo {
 		transition: opacity ease $tr;
