@@ -1,0 +1,21 @@
+.button {
+	width: 100%;
+	border: 0;
+	background-color: $accent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	font-family: $ff;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: $fw-medium;
+	line-height: $lh24;
+	padding: 38px 10px;
+	cursor: pointer;
+	transition: background-color ease $tr;
+
+	&:hover {
+		background-color: $gold;
+	}
+}

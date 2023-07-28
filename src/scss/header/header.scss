@@ -1,5 +1,17 @@
 .header {
 	padding: 15px 0;
+	position: fixed;
+	left: 0;
+	top: 41px;
+	width: 100vw;
+
+	&__logo {
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
 
 	&__wrapper {
 		display: flex;
