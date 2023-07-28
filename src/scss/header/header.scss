@@ -1,0 +1,43 @@
+.header {
+	padding: 15px 0;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+	}
+
+	&__nav_link, .header__contacts_link {
+		color: $white;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: $lh24;
+		margin-right: 45px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+
+		img {
+			margin-right: 11px;
+		}
+
+		&_link {
+			&:hover {
+				color: $gold;
+			}
+		}
+	}
+	
+}
