@@ -16,12 +16,13 @@ body {
 	height: auto;
 	font-family: $ff;
 	font-size: $fs-md;
-	line-height: $lh;
+	line-height: $lh32;
 	color: $black;
 	background-color: $white
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto
 }
