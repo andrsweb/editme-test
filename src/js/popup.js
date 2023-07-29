@@ -5,8 +5,7 @@ import { setTargetElement, getTargetElement } from './common/global'
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
-	showPopup('.main-popup', '.main-popup-btn', '#main-popup-lock')
-	showPopup('.add-popup', '.add-popup-btn', '#add-popup-lock')
+	showPopup('.main-popup', '.popup-button', '#popup-lock')
 } )
 
 const showPopup = ( selector, btn, lock) => {

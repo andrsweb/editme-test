@@ -5,6 +5,17 @@
 	top: 41px;
 	width: 100vw;
 	z-index: 100;
+	transition: padding ease $tr,
+		box-shadow ease $tr,
+		top ease $tr,
+		background-color ease $tr;
+
+	&.scrolled {
+		top: 0;
+		padding: 10px 0;
+		box-shadow: 1px 1px 5px 1px rgba(17, 17, 17, 0.452);
+		background-color: $black;
+	}
 
 	&__logo {
 		transition: opacity ease $tr;
@@ -24,7 +35,8 @@
 		align-items: center;
 	}
 
-	&__nav_link, .header__contacts_link {
+	&__nav_link,
+	.header__contacts_link {
 		color: $white;
 		font-family: $ff;
 		font-size: 16px;
@@ -42,7 +54,14 @@
 		display: flex;
 		align-items: center;
 
+		&:hover {
+			img {
+				scale: 1.2;
+			}
+		}
+
 		img {
+			transition: scale ease $tr;
 			margin-right: 11px;
 		}
 
@@ -52,5 +71,5 @@
 			}
 		}
 	}
-	
+
 }

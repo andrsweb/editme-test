@@ -46,6 +46,9 @@
     "last 3 versions"
   ],
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "inputmask": "^5.0.8",
+    "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^10.0.4"
   }
 }
