@@ -89,3 +89,23 @@ textarea {
 		margin-top: auto
 	}
 }
+
+.form-response {
+	color: green;
+}
+
+.error, .success {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px;
+}
+
+.error {
+	color: red;
+}
+
+.success {
+	color: $gold;
+}
