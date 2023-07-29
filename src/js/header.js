@@ -4,14 +4,14 @@ import { setTargetElement, getTargetElement } from './common/global'
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	// toogleBurgerMenu()
+	toogleBurgerMenu()
 	headerScroll()
-	// closeMenuByTapLink()
+	closeMenuByTapLink()
 })
 
 const toogleBurgerMenu = () => {
 	const burgerButton = document.querySelector('.burger__button')
-	const headerWrapper = document.querySelector('.header__menu')
+	const headerWrapper = document.querySelector('.header__inner')
 
 	burgerButton.addEventListener('click', () => {
 		setTargetElement(document.querySelector('#body-lock'))
@@ -31,7 +31,7 @@ const toogleBurgerMenu = () => {
 
 	window.addEventListener('resize', () => {
 		const windowWidth = window.innerWidth
-		const WINDOW_WIDTH_MD = 992
+		const WINDOW_WIDTH_MD = 767
 
 		if (windowWidth >= WINDOW_WIDTH_MD && headerWrapper.classList.contains('opened')) {
 			headerWrapper.classList.remove('opened')
@@ -43,7 +43,7 @@ const toogleBurgerMenu = () => {
 
 const closeMenuByTapLink = () => {
 	const links = document.querySelectorAll('.header__nav_link')
-	const headerMenu = document.querySelector('.header__menu')
+	const headerMenu = document.querySelector('.header__inner')
 	const burgerButton = document.querySelector('.burger__button')
 	setTargetElement(document.querySelector('#body-lock'))
 

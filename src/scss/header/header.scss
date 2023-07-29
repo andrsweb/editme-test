@@ -2,13 +2,17 @@
 	padding: 15px 0;
 	position: fixed;
 	left: 0;
-	top: 41px;
+	top: 20px;
 	width: 100vw;
 	z-index: 100;
 	transition: padding ease $tr,
 		box-shadow ease $tr,
 		top ease $tr,
 		background-color ease $tr;
+
+		@media all and (min-width: $lg) {
+			top: 41px;
+		}
 
 	&.scrolled {
 		top: 0;
@@ -19,6 +23,13 @@
 
 	&__logo {
 		transition: opacity ease $tr;
+		width: 130px;
+		margin-right: 50px;;
+
+		@media all and (min-width: $xl) {
+			width: 269px;
+			margin-right: 130px;
+		}
 
 		&:hover {
 			opacity: $op;
@@ -28,11 +39,99 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+
+		@media all and (min-width: $md) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__inner {
+		display: none;
+		align-items: center;
+		width: calc( 100% - 180px);
+
+		@media all and (min-width: $md) {
+			display: flex;
+		}
+
+		@media all and (min-width: $xl) {
+			width: calc( 100% - 399px);
+		}
+
+		&.opened {
+			padding: 50px 20px;
+			width: 300px;
+			height: 100%;
+			background-color: $accent;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: fixed;
+			z-index: -1;
+			right: 0;
+			top: 0;
+			overflow-y: auto;
+			margin: auto 0;
+			animation: fade 1s forwards ease;
+
+			@keyframes fade {
+				0% {
+					display: none;
+					opacity: 0;
+					transform: translateX(100%);
+				}
+
+				1% {
+					display: flex;
+				}
+
+				100% {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			.header__menu {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.header__item {
+				margin-bottom: 20px;
+			}
+
+			.header__nav_link {
+				margin-right: 0;
+			}
+
+			.header__contacts {
+				display: flex;
+				flex-direction: column;
+				margin-left: 0;
+
+				img {
+					margin-bottom: 10px;
+				}
+			}
+		}
 	}
 
 	&__nav {
 		display: flex;
 		align-items: center;
+	}
+
+	&__item {
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 45px;
+		}
 	}
 
 	&__nav_link,
@@ -43,16 +142,16 @@
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: $lh24;
-		margin-right: 45px;
+	}
 
-		&:last-child {
-			margin-right: 0;
-		}
+	&__menu {
+		display: flex;
 	}
 
 	&__contacts {
 		display: flex;
 		align-items: center;
+		margin-left: auto;
 
 		&:hover {
 			img {
