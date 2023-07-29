@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const swiperInit = (selector, next, prev) => {
 	const swiper = new Swiper(selector, {
 		grabCursor: true,
-		loop:true,
 		slidesPerView: 1,
 		centeredSlides: true,
 		spaceBetween: 30,
