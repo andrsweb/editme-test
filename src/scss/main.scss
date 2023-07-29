@@ -1,15 +1,24 @@
+@import '../../node_modules/swiper/swiper-bundle.min';
 // Defaults styles.
 @import 'common/fonts';
 @import 'common/vars';
 @import 'common/typography';
 @import 'common/grid';
 @import 'common/base';
+@import 'common/buttons';
 
 // Header styles.
 @import 'header/header';
 
 // Footer styles.
 @import 'footer/footer';
+@import 'footer/popup';
 
 // Home page sections styles.
 @import 'sections/home/hero';
+@import 'sections/home/menu';
+@import 'sections/home/assets';
+@import 'sections/home/food';
+@import 'sections/home/gallery';
+@import 'sections/home/contacts';
+@import 'sections/home/map';

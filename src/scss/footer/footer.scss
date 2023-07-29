@@ -1,0 +1,65 @@
+.footer {
+	padding: 10px 0 80px;
+
+	&__logo {
+		transition: opacity ease $tr;
+		width: 130px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 0;
+			margin: 0;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 269px;
+			margin-right: 130px;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		@media all and (min-width: $md) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: center;
+
+		@media all and (min-width: $md) {
+			width: auto;
+		}
+
+		.hero__link {
+			border: 1px solid $black;
+			color: $black;
+			transition: color ease $tr,
+				transform ease $tr;
+
+			&:hover {
+				color: $white;
+
+				&:first-child {
+					transform: translateX(-5px);
+				}
+
+				&:last-child {
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+}

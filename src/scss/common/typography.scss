@@ -8,11 +8,22 @@ h4, .h4 {
 }
 
 h1, .h1 {
-	font-size: 32px;
-	line-height: $lh88;
+	color: $white;
+	font-family: $ff;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: $fw-bold;
+	line-height: $lh32;
+	margin: 24px 0 40px;
+
+	@media all and (min-width: $md) {
+		font-size: 45px;
+		line-height: $lh40;
+	}
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 64px;
+		line-height: $lh88;
 	}
 }
 
@@ -39,10 +50,10 @@ h4, .h4 {
 a {
 	display: inline-block;
 	text-decoration: none;
-	transition: opacity ease-out $tr;
+	transition: color ease-out $tr;
 
 	&:hover {
-		opacity: $op;
+		color: $gold;
 	}
 }
 

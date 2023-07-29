@@ -1,0 +1,83 @@
+.hero {
+	background-image: url('../img/hero/bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 129px 0 13.9vw;
+
+	@media all and (min-width: $lg) {
+		padding: 264px 0 13.9vw;
+	}
+
+	&__subtitle {
+		color: $white;
+		font-family: $ff;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: $lh32;
+		letter-spacing: 1.44px;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
+	}
+
+	&__links {
+		display: flex;
+		order: 1;
+
+		@media all and (min-width: $md) {
+			order: 2;
+		}
+	}
+
+	.button {
+		max-width: 270px;
+		order: 2;
+		margin-top: 30px;
+
+		@media all and (min-width: $md) {
+			order: 1;
+			margin-top: 0;
+		}
+	}
+}
+
+.hero__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	border: 1px solid $white;
+	border-radius: 50%;
+	color: $white;
+	text-align: center;
+	font-family: $ff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	line-height: $lh24;
+	margin-right: 25px;
+	transition: background-color ease $tr;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:hover {
+		background-color: $accent;
+	}
+}
