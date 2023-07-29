@@ -11,9 +11,13 @@
 	font-style: normal;
 	font-weight: $fw-medium;
 	line-height: $lh24;
-	padding: 38px 10px;
+	padding: 15px 10px;
 	cursor: pointer;
 	transition: background-color ease $tr;
+
+	@media all and (min-width: $md) {
+		padding: 38px 10px;
+	}
 
 	&:hover {
 		background-color: $gold;
