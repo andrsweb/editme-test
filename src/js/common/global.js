@@ -1,3 +1,6 @@
+let windowHeight = window.innerHeight
+export const getWindowHeight = () => windowHeight
+
 /**
  * Render SVG code from images (<img /> tags).
  *
