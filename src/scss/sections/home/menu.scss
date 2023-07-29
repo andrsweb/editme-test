@@ -2,7 +2,7 @@
 	padding: 50px 0;
 
 	@media all and (min-width: $lg) {
-		padding: 80px 0 90px;
+		padding: 50px 0 90px;
 	}
 
 	&__items {
@@ -14,7 +14,10 @@
 		}
 
 		&_left {
-			margin-right: 24px;
+			@media all and (min-width: $md) {
+				padding-top: 2.3%;
+				margin-right: 24px;
+			}
 		}
 
 		&_right {
