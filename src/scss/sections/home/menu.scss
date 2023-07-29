@@ -1,8 +1,17 @@
 .menu {
-	padding: 80px 0 90px;
+	padding: 50px 0;
+
+	@media all and (min-width: $lg) {
+		padding: 80px 0 90px;
+	}
 
 	&__items {
 		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 
 		&_left {
 			margin-right: 24px;
@@ -11,16 +20,35 @@
 		&_right {
 			display: flex;
 			position: relative;
+			margin-top: 30px;
 
 			&::before {
 				content: "";
 				position: absolute;
 				left: 97px;
 				top: 51px;
-				width: 471px;
-				height: 502px;
+				width: 271px;
+				height: 50%;
 				border: 2px solid $gold;
 				z-index: -1;
+
+				@media all and (min-width: $md) {
+					height: 40%;
+					margin-top: 0;
+				}
+
+				@media all and (min-width: $lg) {
+					height: 60%;
+				}
+
+				@media all and (min-width: $xl) {
+					height: 80%;
+				}
+
+				@media all and (min-width: $xxl) {
+					width: 471px;
+					height: 502px;
+				}
 			}
 		}
 	}
@@ -51,14 +79,24 @@
 		}
 
 		&_title {
-			font-size: 24px;
+			font-size: 15px;
 			font-weight: $fw-semibold;
 			margin-bottom: 10px;
+
+			@media all and (min-width: $md) {
+				font-size: 24px;
+			}
 		}
 
 		&_name, &_text {
-			font-size: 18px;
+			font-size: 12px;
 			font-weight: $fw-regular;
+			line-height: $lh24;
+
+			@media all and (min-width: $md) {
+				font-size: 18px;
+				line-height: $lh32;
+			}
 		}
 
 		.dots {
