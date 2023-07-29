@@ -1,0 +1,104 @@
+.assets {
+	padding: 50px 0;
+	background-color: $accent;
+
+	@media all and (min-width: $lg) {
+		padding: 220px 0;
+	}
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 34px;
+	}
+
+	&__title {
+		color: $gold;
+		text-align: center;
+		font-family: $ff;
+		font-size: 25px;
+		font-style: normal;
+		font-weight: $fw-semibold;
+		line-height: $lh32;
+
+		@media all and (min-width: $md) {
+			font-size: 36px;
+			line-height: $lh40;
+		}
+	}
+
+	&__text {
+		color: $white;
+		text-align: center;
+		font-family: $ff;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: $lh24;
+		margin-bottom: 40px;
+
+		@media all and (min-width: $md) {
+			font-size: 16px;
+			line-height: $lh40;
+		}
+	}
+
+	&__author {
+		color: $gold;
+		text-align: center;
+		font-family: $ff;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: $fw-semibold;
+		line-height: $lh24;
+		letter-spacing: 5.88px;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+			line-height:  $lh40;
+		}
+	}
+
+	.assets-swiper {
+		position: relative;
+	}
+
+	.assets-slide {
+		padding: 0 17%;
+	}
+
+	&-prev, &-next {
+		cursor: pointer;
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		z-index: 3;
+
+		svg path {
+			transition: stroke ease $tr;
+		}
+
+		&:hover {
+			svg path {
+				stroke: $gold;
+			}
+		}
+	}
+
+	&-prev {
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&-next {
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+}

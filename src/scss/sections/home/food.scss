@@ -1,0 +1,105 @@
+.food {
+	padding: 50px 0;
+
+	@media all and (min-width: $lg) {
+		padding: 109px 0 80px;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 30px;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.reverse {
+			@media all and (min-width: $md) {
+				flex-direction: row-reverse;
+
+				.food__info {
+					margin-right: 0;
+					margin-left: 30px;
+				}
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			margin-right: 30px;
+			max-width: 470px;
+		}			
+
+		@media all and (min-width: $lg) {
+			align-items: flex-start;
+		}			
+
+		&_title {
+			color: $black;
+			font-family: $ff;
+			font-size: 25px;
+			font-style: normal;
+			font-weight: $fw-bold;
+			line-height: $lh32;
+			position: relative;
+			margin-bottom: 20px;
+
+			@media all and (min-width: $md) {
+				font-size: 30px;
+			}			
+
+			@media all and (min-width: $lg) {
+				font-size: 40px;
+				line-height: $lh88;
+			}			
+
+			&::before {
+				content: "";
+				display: block;
+				height: 2px;
+				width: 108px;
+				background-color: $gold;
+				position: absolute;
+				bottom: -6px;
+				left: 50%;
+				transform: translateX(-50%);
+
+				@media all and (min-width: $md) {
+					left: -40px;
+					transform: translateX(0);
+				}
+			}
+		}
+
+		&_text {
+			color: #808080;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: $lh32;
+			text-align: center;
+
+			@media all and (min-width: $md) {
+				text-align: left;
+			}
+		}
+	}
+}
