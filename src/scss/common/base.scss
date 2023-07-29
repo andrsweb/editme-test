@@ -44,21 +44,29 @@ input, textarea {
 	width: 100%;
 	color: #808080;
 	font-family: $ff;
-	font-size: 16px;
+	font-size: 12px;
 	font-style: normal;
 	font-weight: $fw-regular;
 	line-height: $lh24;
 	border: 1px solid $bord;
 	padding: 26.5px 0 26.5px 16px;
 
+	@media all and (min-width: $md) {
+		font-size: 16px;
+	}
+
 	&::placeholder {
 		color: #808080;
 		font-family: $ff;
-		font-size: 16px;
+		font-size: 12px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: $lh24;
 		opacity: 1;
+
+		@media all and (min-width: $md) {
+			font-size: 16px;
+		}
 	}
 }
 

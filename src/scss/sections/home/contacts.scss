@@ -1,33 +1,63 @@
 .contacts {
-	padding: 94px 0 25px;
+	padding: 50px 0;
+
+	@media all and (min-width: $lg) {
+		padding: 94px 0 25px;
+	}
 
 	h2 {
 		color: $black;
 		font-family: $ff;
-		font-size: 48px;
+		font-size: 25px;
 		font-style: normal;
 		font-weight: $fw-bold;
-		line-height: $lh88;
+		line-height: $lh40;
 		margin-bottom: 35px;
+
+		@media all and (min-width: $md) {
+			font-size: 30px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 48px;
+			line-height: $lh88;
+		}
 	}
 
 	&__wrapper {
 		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 	}
 
 	&__info {
-		width: calc(43% - 50px);
-		margin-right: 50px;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			width: calc(43% - 50px);
+			margin-right: 50px;
+		}
 	}
 
 	&__form {
-		width: 57%;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			width: 57%;
+		}
 	}
 
 	&__item {
 		display: flex;
 		align-items: center;
-		margin-bottom: 43px;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 43px;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -37,11 +67,16 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 64px;
-			height: 64px;
+			width: 40px;
+			height: 40px;
 			border-radius: 50%;
 			background-color: $gold;
 			margin-right: 16px;
+
+			@media all and (min-width: $xl) {
+				width: 64px;
+				height: 64px;
+			}
 
 			img {
 				width: 24px;
@@ -52,31 +87,54 @@
 		&_title {
 			color: #2E2E2E;
 			font-family: $ff;
-			font-size: 16px;
+			font-size: 14px;
 			font-style: normal;
 			font-weight: $fw-regular;
-			line-height: $lh32; 
+			line-height: $lh32;
+
+			@media all and (min-width: $lg) {
+				font-size: 16px;
+			}
 		}
 
 		&_text {
 			color: #2E2E2E;
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 16px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: $lh32;
+
+			@media all and (min-width: $lg) {
+				font-size: 24px;
+			}
 		}
 	}
 
 	.form {
+		margin-top: 30px;
+
+		@media all and (min-width: $md) {
+			margin-top: 0;
+		}
+
 		legend {
 			color: $black;
 			font-family: $ff;
-			font-size: 48px;
+			font-size: 25px;
 			font-style: normal;
 			font-weight: $fw-bold;
-			line-height: $lh88;
+			line-height: $lh40;
 			margin-bottom: 29px;
+
+			@media all and (min-width: $md) {
+				font-size: 30px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 48px;
+				line-height: $lh88;
+			}
 		}
 
 		input {
@@ -86,10 +144,14 @@
 		label {
 			color: $black;
 			font-family: $ff;
-			font-size: 16px;
+			font-size: 14px;
 			font-style: normal;
 			font-weight: $fw-regular;
 			line-height: $lh32;
+
+			@media all and (min-width: $md) {
+				font-size: 16px;
+			}
 		}
 
 		&__inputs {
