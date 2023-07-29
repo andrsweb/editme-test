@@ -55,6 +55,16 @@
 		height: 70px;
 		position: absolute;
 		z-index: 3;
+
+		svg path {
+			transition: stroke ease $tr;
+		}
+
+		&:hover {
+			svg path {
+				stroke: $gold;
+			}
+		}
 	}
 
 	&-prev {
@@ -68,7 +78,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 
-		img {
+		svg {
 			transform: rotate(180deg);
 		}
 	}
