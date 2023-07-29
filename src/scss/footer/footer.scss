@@ -1,0 +1,33 @@
+.footer {
+	padding: 10px 0 80px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+
+		.hero__link {
+			border: 1px solid $black;
+			color: $black;
+			transition: color ease $tr,
+					transform ease $tr;
+
+			&:hover {
+				color: $white;
+
+				&:first-child {
+					transform: translateX(-5px);
+				}
+
+				&:last-child {
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+}
